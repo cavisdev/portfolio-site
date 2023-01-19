@@ -4,6 +4,13 @@ import lightTheme from "./styles/Theme.styles"
 
 
 declare module "styled-components" {
-    type Theme = typeof lightTheme;
-    export interface DefaultTheme extends Theme {}
+    export interface DefaultTheme{
+        colors: Color,
+          mainDisplay: string;
+          gradientLine: string;
+    }
+}
+
+type Color = {
+    [key: string]: string;
 }
