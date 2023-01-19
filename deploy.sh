@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-# abort on all errors
+# abort on errors
 set -e
 
 echo "building"
