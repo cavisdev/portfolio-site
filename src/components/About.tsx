@@ -2,7 +2,7 @@ import {
   AboutContainer,
   AboutText,
   AboutColumn,
-  SkillsColumn,
+  ExperienceColumn,
   DecorativeBox,
   Headshot,
   List,
@@ -10,6 +10,8 @@ import {
   SkillsListContainer,
   Title,
   GradientLine,
+  School,
+  SchoolInformation,
 } from "../styles/About.styles";
 
 export default function About() {
@@ -53,7 +55,28 @@ export default function About() {
         </AboutText>
       </AboutColumn>
       <GradientLine />
-      <SkillsColumn>
+      <ExperienceColumn>
+        <Title>Education</Title>
+        <School>Scrimba</School>
+        <SchoolInformation>
+          Front-end Development - React JS
+          <br />
+          June 2022 - October 2022
+        </SchoolInformation>
+        <School>Pikes Peak Community College</School>
+        <SchoolInformation>
+          AAS - Graphic Design
+          <br />
+          January 2015 - May 2018
+        </SchoolInformation>
+        <School>Colorado State University</School>
+        <SchoolInformation>
+          BS - Computer Science
+          <br />
+          (Two Years Completed)
+          <br />
+          August 2011 - May 2013
+        </SchoolInformation>
         <Title>Skills</Title>
         <SkillsListContainer>
           <List>
@@ -91,7 +114,7 @@ export default function About() {
             }}
           />
         </SkillsListContainer>
-      </SkillsColumn>
+      </ExperienceColumn>
     </AboutContainer>
   );
 }

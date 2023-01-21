@@ -26,7 +26,6 @@ top: 0;
 left: ${(props) => (props.visible ? "0px" : "-200px")};
 transition: left 0.5s ease-out;
 height: 100%;
-min-height: 580px;
 width: 180px;
 padding: 2rem 1rem 0 2rem;
 z-index: 100;

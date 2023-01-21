@@ -13,16 +13,16 @@ const lightTheme: DefaultTheme = {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: calc(100vh - 140px);
+  min-height: calc(100vh - 140px);
   min-width:302px;
   width: 100%;
 
   @media only screen and (min-width: 680px) and (orientation: landscape) {
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
   }
 
   @media only screen and (min-width: 680px) and (orientation: portrait) {
-  height: calc(100vh - 244px);
+  min-height: calc(100vh - 244px);
   }
 `,
   gradientLine: `
@@ -44,16 +44,16 @@ const darkTheme: DefaultTheme = {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: calc(100vh - 140px);
+    min-height: calc(100vh - 140px);
     min-width:302px;
     width: 100%;
 
     @media only screen and (min-width: 680px) and (orientation: landscape) {
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
     }
 
     @media only screen and (min-width: 680px) and (orientation: portrait) {
-    height: calc(100vh - 244px);
+    min-height: calc(100vh - 244px);
     }
   `,
   gradientLine: `

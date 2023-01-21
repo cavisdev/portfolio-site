@@ -3,7 +3,6 @@ import styled from "styled-components";
 const HomeContainer = styled.div`
   ${({ theme }) => theme.mainDisplay};
   justify-content: center;
-  min-height: 302px;
 `;
 
 const Welcome = styled.p`

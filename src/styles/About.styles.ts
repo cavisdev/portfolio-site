@@ -19,16 +19,15 @@ interface BoxStyles {
 const AboutContainer = styled.div`
   ${({ theme }) => theme.mainDisplay};
   justify-content: space-between;
-  min-height: 524px;
   padding: 1rem 2rem;
+  gap: 1rem;
 
   @media only screen and (min-width: 680px) and (orientation: landscape) {
-    min-height: 720px;
     flex-direction: row;
+    gap: 0;
   }
 
   @media only screen and (min-width: 680px) and (orientation: portrait) {
-    min-height: 720px;
     flex-direction: row;
   }
 `;
@@ -51,7 +50,7 @@ const AboutColumn = styled.div`
   }
 `;
 
-const SkillsColumn = styled.div`
+const ExperienceColumn = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -169,10 +168,22 @@ const GradientLine = styled.div`
   }
 `;
 
+const School = styled.h6`
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+`
+
+const SchoolInformation = styled.p`
+  margin: 0;
+  margin-bottom: 1rem;
+  font-weight: 300;
+`
+
 export {
   AboutContainer,
   AboutColumn,
-  SkillsColumn,
+  ExperienceColumn,
   Headshot,
   DecorativeBox,
   AboutText,
@@ -181,4 +192,6 @@ export {
   List,
   Skill,
   GradientLine,
+  School,
+  SchoolInformation
 };

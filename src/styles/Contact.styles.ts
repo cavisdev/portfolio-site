@@ -4,8 +4,8 @@ const ContactContainer = styled.div`
   ${({ theme }) => theme.mainDisplay};
   justify-content: center;
   margin: 0 auto;
-  min-height: 302px;
   gap: 2rem;
+  padding: 1rem 0;
 `;
 
 const Text = styled.p`
