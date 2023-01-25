@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { data } from "../components/Projects_Elements/data";
 
 type Project = {
     name: string;
@@ -33,23 +34,7 @@ const useStore = create<State>()((set, get) => ({
   setProjectTabOpen: () => {
     set(() => ({ projectTabOpen: !get().projectTabOpen }));
   },
-  activeProject: {
-    name: "PokéStats",
-    image: "./images/Pokestats_Preview.jpg",
-    description:
-      "Pokestats.info is a passion project, built out of my love for the Pokemon video game franchise. I often found myself looking up the statistics of Pokemon in my spare time, but most websites make it difficult to quickly compare those stats. I went into this project with the goal of creating a layout where it would be much quicker and easier to make those comparisons, and I couldn’t be happier with the result.",
-    skills: [
-      "React JSX",
-      "Javascript",
-      "HTML",
-      "CSS",
-      "RESTful API",
-      "Styled-Components",
-      "Zustand",
-    ],
-    link: "https://www.pokestats.info",
-    github: "https://github.com/cavisdev/pokestats-react",
-  },
+  activeProject: data.projects[0],
   setActiveProject: (obj) => {
       set(() => ({ activeProject: {...obj} }));
   },

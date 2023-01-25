@@ -19,7 +19,7 @@ export default function About() {
     <AboutContainer>
       <AboutColumn>
         <Headshot>
-          <img src="./images/Profile.jpg" />
+          <img src="./images/Profile.webp" />
           <DecorativeBox
             props={{
               solidColor: "secondary",
