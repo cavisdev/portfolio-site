@@ -1,4 +1,4 @@
-import { Column, GradientLine, Name, NameplateContainer, Position, Skill } from "../../styles/Nameplate.styles";
+import { Column, GradientLine, Name, NameplateContainer, Position, Skill } from "../styles/Nameplate.styles";
 
 export default function Nameplate() {
 

@@ -1,4 +1,4 @@
-import { useStore } from "../../store/useStore";
+import { useStore } from "../store/useStore";
 import {
   MobileNavContainer,
   Backdrop,
@@ -11,9 +11,9 @@ import {
   Description,
   Skills,
   InfoContainer,
-} from "../../styles/Projects.styles";
-import ArrowIcon from "../Navigation/ArrowIcon";
-import { data } from "../Projects_Elements/data";
+} from "../styles/Projects.styles";
+import ArrowIcon from "../components/Navigation/ArrowIcon";
+import { data } from "./data";
 
 export default function Projects() {
   const projectTabOpen = useStore((state) => state.projectTabOpen);

@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { data } from "../components/Projects_Elements/data";
+import { data } from "../projects/data";
 
 type Project = {
     name: string;

@@ -1,5 +1,5 @@
-import { useStore } from "../../store/useStore";
-import { ContactButton, ContactContainer, SocialLink, Socials, Text} from "../../styles/Contact.styles";
+import { useStore } from "../store/useStore";
+import { ContactButton, ContactContainer, SocialLink, Socials, Text} from "../styles/Contact.styles";
 
 export default function Contact() {
     const darkMode = useStore((state) => state.darkMode)

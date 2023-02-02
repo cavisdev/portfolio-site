@@ -2,7 +2,7 @@ import {
   HomeContainer,
   Welcome,
 } from "../styles/Home.styles";
-import Nameplate from "./Home_Elements/Nameplate";
+import Nameplate from "./Nameplate";
 
 export default function Home() {
   return (
