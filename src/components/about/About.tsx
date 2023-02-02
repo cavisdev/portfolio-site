@@ -12,7 +12,7 @@ import {
   GradientLine,
   School,
   SchoolInformation,
-} from "../styles/About.styles";
+} from "../../styles/About.styles";
 
 export default function About() {
   return (

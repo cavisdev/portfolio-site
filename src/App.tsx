@@ -1,11 +1,11 @@
 import { RouteObject, useRoutes } from "react-router-dom";
 import { ThemeProvider } from "styled-components"
-import About from "./components/About";
-import Contact from "./components/Contact";
+import About from "./components/about/About";
+import Contact from "./components/contact/Contact";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Nav from "./components/Navigation/Nav";
-import Projects from "./components/Projects";
+import Projects from "./components/projects/Projects";
 import { useStore } from "./store/useStore";
 import { Page } from "./styles/App.styles";
 import { GlobalStyle } from "./styles/GlobalStyle"
