@@ -17,7 +17,7 @@ padding: 0;
 
 & * {
     text-decoration: none;
-    color: ${({ theme }) => theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.white};
     opacity: 0.5;
 }
 
@@ -32,8 +32,4 @@ padding: 0;
 }
 `
 
-const GradientLine = styled.div`
-${({theme}) => theme.gradientLine};
-`
-
-export {LinksContainer, LinkList, GradientLine}
+export {LinksContainer, LinkList}

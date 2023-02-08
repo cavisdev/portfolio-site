@@ -1,11 +1,24 @@
 import styled from "styled-components";
 
 const ContactContainer = styled.div`
-  ${({ theme }) => theme.mainDisplay};
   justify-content: center;
   margin: 0 auto;
   gap: 2rem;
   padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 140px);
+  min-width: 302px;
+  width: 100%;
+
+  @media only screen and (min-width: 680px) and (orientation: landscape) {
+    min-height: calc(100vh - 100px);
+  }
+
+  @media only screen and (min-width: 680px) and (orientation: portrait) {
+    min-height: calc(100vh - 244px);
+  }
 `;
 
 const Text = styled.p`

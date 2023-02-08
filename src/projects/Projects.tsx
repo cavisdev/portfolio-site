@@ -1,18 +1,13 @@
 import { useStore } from "../store/useStore";
 import {
-  MobileNavContainer,
-  Backdrop,
   ProjectLink,
   ProjectsContainer,
-  DesktopNavContainer,
-  MobileView,
   DisplayContainer,
   DisplayImage,
   Description,
-  Skills,
-  InfoContainer,
+  ProjectTitle,
 } from "../styles/Projects.styles";
-import ArrowIcon from "../components/Navigation/ArrowIcon";
+import { Skill, SkillsListContainer } from "../styles/Toolbox.styles";
 import { data } from "./data";
 
 export default function Projects() {
@@ -32,29 +27,17 @@ export default function Projects() {
 
   return (
     <ProjectsContainer>
-      <MobileView>
-        <ArrowIcon handleClick={() => setProjectTabOpen()} />
-        <Backdrop
-          visible={projectTabOpen ? true : false}
-          onClick={() => setProjectTabOpen()}
-        />
-        <MobileNavContainer visible={projectTabOpen}>
-          {projectLinks}
-        </MobileNavContainer>
-      </MobileView>
-      <DesktopNavContainer>{projectLinks}</DesktopNavContainer>
           <DisplayContainer>
               <a href={activeProject.link} target="_blank">
               <DisplayImage src={activeProject.image} />
-              </a>
-        <InfoContainer>
+        </a>
+        <ProjectTitle>{ activeProject.name}</ProjectTitle>
           <Description>{activeProject.description}</Description>
-          <Skills>
+          <SkillsListContainer>
             {activeProject.skills.map((skill) => (
-              <p key={skill}>{skill}</p>
+              <Skill key={skill}>{skill}</Skill>
             ))}
-          </Skills>
-        </InfoContainer>
+          </SkillsListContainer>
       </DisplayContainer>
     </ProjectsContainer>
   );

@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import {
   LinksContainer,
   LinkList,
-  GradientLine,
 } from "../../styles/NavLinks.styles";
 
 export default function NavLinks() {
@@ -34,7 +33,6 @@ export default function NavLinks() {
           contact
         </NavLink>
       </LinkList>
-      <GradientLine />
     </LinksContainer>
   );
 }

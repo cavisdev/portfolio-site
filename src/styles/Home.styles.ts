@@ -1,18 +1,26 @@
 import styled from "styled-components";
+import { bounce } from "../animations/ScrollArrow.animation";
 
 const HomeContainer = styled.div`
-  ${({ theme }) => theme.mainDisplay};
+  position: relative;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  margin-bottom: 8em;
 `;
 
-const Welcome = styled.p`
-  margin: 0;
-  font-weight: 300;
-  width: 80%;
-  line-height: 2rem;
-
-  @media only screen and (min-width: 680px) {
-    font-size: 1.25rem;
+const Arrow = styled.img`
+  position: absolute;
+  width: 5%;
+  bottom: 5%;
+  cursor: pointer;
+  transform: translate(-50%);
+  &:hover, &:focus{
+    animation: ${bounce} 1s infinite;
   }
 `;
-export { HomeContainer, Welcome };
+
+export { HomeContainer, Arrow };

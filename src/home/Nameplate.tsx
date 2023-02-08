@@ -1,5 +1,4 @@
 import { Column, GradientLine, Name, NameplateContainer, Position, Skill } from "../styles/Nameplate.styles";
-
 export default function Nameplate() {
 
     return (
@@ -9,11 +8,11 @@ export default function Nameplate() {
                     CAVIS
                 </Name>
                 <Position>
-                    FRONTEND DEVELOPER
+                    FRONTEND<br />DEVELOPER
                 </Position>
             </Column>
             <GradientLine />
-            <Column style={{ justifyContent: "flex-end"}}>
+            <Column style={{ justifyContent: "flex-end" }} className={"fadeDown"}>
                 <Skill>css</Skill>
                 <Skill>html</Skill>
                 <Skill>react</Skill>

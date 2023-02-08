@@ -11,8 +11,6 @@ type Project = {
 }
 
 interface State {
-  darkMode: boolean;
-  setDarkMode: () => void;
   mobileMenuOpen: boolean;
   setMobileMenuOpen: () => void;
   projectTabOpen: boolean;
@@ -22,10 +20,6 @@ interface State {
 }
 
 const useStore = create<State>()((set, get) => ({
-  darkMode: true,
-  setDarkMode: () => {
-    set(() => ({ darkMode: !get().darkMode }));
-  },
   mobileMenuOpen: false,
   setMobileMenuOpen: () => {
     set(() => ({ mobileMenuOpen: !get().mobileMenuOpen }));

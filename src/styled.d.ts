@@ -6,8 +6,6 @@ import lightTheme from "./styles/Theme.styles"
 declare module "styled-components" {
     export interface DefaultTheme{
         colors: Color,
-          mainDisplay: string;
-          gradientLine: string;
     }
 }
 

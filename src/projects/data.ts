@@ -23,7 +23,7 @@ const data: Data = {
         "Javascript",
         "HTML",
         "CSS",
-        "RESTful API",
+        "REST",
         "Styled-Components",
         "Zustand",
       ],

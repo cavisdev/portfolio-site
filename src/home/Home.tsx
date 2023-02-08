@@ -1,17 +1,14 @@
-import {
-  HomeContainer,
-  Welcome,
-} from "../styles/Home.styles";
+import { Arrow, HomeContainer } from "../styles/Home.styles";
+import { Link } from "react-scroll";
 import Nameplate from "./Nameplate";
 
 export default function Home() {
   return (
-      <HomeContainer>
+    <HomeContainer>
       <Nameplate />
-      <Welcome>
-        Hello! My name is Cameron Avis, and I’m a front-end developer based in
-        Portland, OR. Welcome to my portfolio!
-          </Welcome>
+      <Link to="about" spy={true} smooth={true} offset={-64} duration={500}>
+        <Arrow src="./images/ScrollArrow.svg" />
+      </Link>
     </HomeContainer>
   );
 }
