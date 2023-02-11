@@ -13,12 +13,20 @@ const ContactContainer = styled.div`
   padding: 4em 0;
   min-height: 50vh;
   width: 100%;
+
+  @media only screen and (min-width: 1280px) {
+    padding: 8em 0;
+  }
 `;
 
 const Row = styled.div`
   display: flex;
   align-items: center;
   gap: 8vw;
+
+  @media only screen and (min-width: 1024px) {
+    gap: 6vw;
+  }
 `;
 
 const CenterHex = styled.div`
@@ -38,6 +46,13 @@ const CenterHex = styled.div`
   background-position: center;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   transform: translate(45%, 0%);
+
+  @media only screen and (min-width: 1024px) {
+    width: 20vw;
+    height: 22.5vw;
+    font-size: 3.25vw;
+    transform: translate(40%, 0%);
+  }
 `;
 
 const SatelliteHex = styled.div<SatelliteProps>`
@@ -60,6 +75,12 @@ const SatelliteHex = styled.div<SatelliteProps>`
       animation: ${shake} 1s infinite linear;
     }
   } 
+
+  @media only screen and (min-width: 1024px) {
+    width: 10vw;
+    height: 11.25vw;
+    font-size: 3.25vw;
+  }
 `;
 
 export { ContactContainer, Row, CenterHex, SatelliteHex };

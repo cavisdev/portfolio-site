@@ -9,6 +9,7 @@ import {
   ProjectNav,
   SectionTitle,
   LinkContainer,
+  Content,
 } from "../styles/Projects.styles";
 import { Skill, SkillsListContainer } from "../styles/Toolbox.styles";
 import { data } from "./data";
@@ -28,25 +29,27 @@ export default function Projects() {
   return (
     <ProjectsContainer id="projects">
       <SectionTitle>Projects</SectionTitle>
-      <ProjectNav>{projectLinks}</ProjectNav>
-      <DisplayContainer>
-        <DisplayImage src={activeProject.image} />
-        <ProjectTitle>{activeProject.name}</ProjectTitle>
-        <Description>{activeProject.description}</Description>
-        <LinkContainer>
-          <a href={activeProject.link} target="_blank">
-            View Project
-          </a>
-          <a href={activeProject.github} target="_blank">
-            View Code
-          </a>
-        </LinkContainer>
-        <SkillsListContainer>
-          {activeProject.skills.map((skill) => (
-            <Skill key={skill}>{skill}</Skill>
-          ))}
-        </SkillsListContainer>
-      </DisplayContainer>
+      <Content>
+        <ProjectNav>{projectLinks}</ProjectNav>
+        <DisplayContainer>
+          <DisplayImage src={activeProject.image} />
+          <ProjectTitle>{activeProject.name}</ProjectTitle>
+          <Description>{activeProject.description}</Description>
+          <LinkContainer>
+            <a href={activeProject.link} target="_blank">
+              View Project
+            </a>
+            <a href={activeProject.github} target="_blank">
+              View Code
+            </a>
+          </LinkContainer>
+          <SkillsListContainer>
+            {activeProject.skills.map((skill) => (
+              <Skill key={skill}>{skill}</Skill>
+            ))}
+          </SkillsListContainer>
+        </DisplayContainer>
+      </Content>
     </ProjectsContainer>
   );
 }

@@ -5,13 +5,16 @@ interface ProjectNavItemProps {
 }
 
 const ProjectsContainer = styled.div`
-  display: flex;
   padding: 4em;
-  flex-direction: column;
+  margin: 20vw 0;
   min-height: 100vh;
   width: 100%;
   letter-spacing: 0.25px;
   line-height: 1.25em;
+
+  @media only screen and (min-width: 1280px) {
+    padding: 8em;
+  }
 `;
 
 const SectionTitle = styled.div`
@@ -19,7 +22,26 @@ const SectionTitle = styled.div`
   margin-bottom: 2em;
   font-size: 8vw;
   font-weight: 700;
+
+  @media only screen and (min-width: 1024px) {
+    font-size: 6vw;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    font-size: 4vw;
+    margin-bottom: 1em;
+  }
 `;
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: 1024px) {
+    flex-direction: row;
+    gap: 2em;
+  }
+`
 
 const ProjectNav = styled.div`
   overflow-x: scroll;
@@ -29,6 +51,25 @@ const ProjectNav = styled.div`
   height: 25vw;
   gap: 0em 1.5em;
   margin-bottom: 2em;
+
+  @media only screen and (min-width: 1024px) {
+    flex-direction: column;
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 100%;
+    margin-bottom: 0;
+    width: 20%;
+    align-items: center;
+  }
+
+  @media only screen and (min-width: 1280px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    margin-bottom: 0;
+    width: 40%;
+    align-items: center;
+  }
 `;
 
 const ProjectLink = styled.div<ProjectNavItemProps>`
@@ -47,12 +88,22 @@ const ProjectLink = styled.div<ProjectNavItemProps>`
   &:focus {
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   }
+
+  @media only screen and (min-width: 1024px) {
+    width: 11vw;
+    height: 13vw;
+  }
 `;
 
 const DisplayContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1em;
+  width: 100%;
+
+  @media only screen and (min-width: 1280px) {
+    width: 60%;
+  }
 `;
 
 const DisplayImage = styled.img`
@@ -67,6 +118,14 @@ const ProjectTitle = styled.p`
   padding-left: 0.25em;
   font-size: 6vw;
   font-weight: 700;
+
+  @media only screen and (min-width: 1024px) {
+    font-size: 4vw;
+  }
+
+  @media only screen and (min-width: 1280px) {
+    font-size: 2vw;
+  }
 `;
 
 const Description = styled.p`
@@ -99,6 +158,7 @@ const LinkContainer = styled.div`
 export {
   ProjectsContainer,
   SectionTitle,
+  Content,
   ProjectNav,
   ProjectLink,
   DisplayContainer,

@@ -5,23 +5,24 @@ import {
   InfoColumn,
   Headshot,
   Title,
-  School,
+  SchoolName,
   SchoolInformation,
   Welcome,
   SchoolList,
+  SchoolBlock,
 } from "../styles/About.styles";
 import { Skill, SkillsListContainer } from "../styles/Toolbox.styles";
 
 export default function About() {
   const schools = aboutData.education.map((item) => (
-    <div key={item.school}>
-      <School>{item.school}</School>
+    <SchoolBlock key={item.school}>
+      <SchoolName>{item.school}</SchoolName>
       <SchoolInformation>
         {item.major}
         <br />
         {item.date}
       </SchoolInformation>
-    </div>
+    </SchoolBlock>
   ));
 
   const skills = aboutData.skills.map((item) => (

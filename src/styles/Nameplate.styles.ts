@@ -36,6 +36,14 @@ const Name = styled.h1`
   animation: ${fadeIn} 1.5s ease-out;
   animation-fill-mode: backwards;
   animation-delay: 0.5s;
+
+  @media only screen and (min-width: 600px) {
+    font-size: 12vw;
+  }
+
+  @media only screen and (min-width: 1280px) {
+    font-size: 8vw;
+  }
 `;
 
 const Position = styled.h3`
@@ -44,6 +52,14 @@ const Position = styled.h3`
   margin: 0;
   color: ${({ theme }) => theme.colors.green};
   font-weight: 300;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 1.75rem;
+  }
+
+  @media only screen and (min-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 
 const GradientLine = styled.div`
@@ -53,6 +69,10 @@ const GradientLine = styled.div`
     ${({ theme }) => theme.colors.white} 0%,
     rgba(242, 244, 249, 0) 100%
   );
+
+  @media only screen and (min-width: 600px) {
+    width: 4px;
+  }
 `;
 
 const Skill = styled.h6`
@@ -60,6 +80,10 @@ const Skill = styled.h6`
   margin-top: 0.25em;
   font-weight: 300;
   font-size: 0.9rem;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 1.4rem;
+  }
 `;
 
 export { NameplateContainer, Column, Name, Position, GradientLine, Skill };

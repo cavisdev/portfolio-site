@@ -15,11 +15,15 @@ const HomeContainer = styled.div`
 const Arrow = styled.img`
   position: absolute;
   width: 5%;
-  bottom: 5%;
+  bottom: 10%;
   cursor: pointer;
   transform: translate(-50%);
   &:hover, &:focus{
     animation: ${bounce} 1s infinite;
+  }
+
+  @media only screen and (min-width: 1280px) {
+    width: 2%;
   }
 `;
 
