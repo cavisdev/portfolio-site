@@ -8,24 +8,19 @@ import Projects from "./projects/Projects";
 import { Page } from "./styles/App.styles";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import { theme } from "./styles/Theme.styles";
+import Footer from "./footer/Footer";
 
 function App() {
-  const routes: RouteObject[] = [
-    { id: "home", element: <Home /> },
-    { id: "about", element: <About /> },
-    { id: "contact", element: <Contact /> },
-    { id: "projects", element: <Projects /> },
-  ];
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      {useRoutes(routes)}
       <Home />
       <Nav />
       <About />
       <Projects />
       <Contact />
+      <Footer />
     </ThemeProvider>
   );
 }

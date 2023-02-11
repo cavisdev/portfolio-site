@@ -13,8 +13,6 @@ type Project = {
 interface State {
   mobileMenuOpen: boolean;
   setMobileMenuOpen: () => void;
-  projectTabOpen: boolean;
-  setProjectTabOpen: () => void;
   activeProject: Project;
   setActiveProject: (obj: Project) => void;
 }
@@ -23,10 +21,6 @@ const useStore = create<State>()((set, get) => ({
   mobileMenuOpen: false,
   setMobileMenuOpen: () => {
     set(() => ({ mobileMenuOpen: !get().mobileMenuOpen }));
-  },
-  projectTabOpen: false,
-  setProjectTabOpen: () => {
-    set(() => ({ projectTabOpen: !get().projectTabOpen }));
   },
   activeProject: data.projects[0],
   setActiveProject: (obj) => {

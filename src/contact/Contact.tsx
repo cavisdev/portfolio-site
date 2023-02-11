@@ -1,21 +1,33 @@
-import { useStore } from "../store/useStore";
-import { ContactButton, ContactContainer, SocialLink, Socials, Text} from "../styles/Contact.styles";
+import {
+  CenterHex,
+  ContactContainer,
+  Row,
+  SatelliteHex,
+} from "../styles/Contact.styles";
 
 export default function Contact() {
-    const darkMode = useStore((state) => state.darkMode)
-
   return (
-      <ContactContainer>
-          <Text>I'm <span className="green">Excited</span><br /> to Hear from <span className="green">You!</span></Text>
-          <Socials>
-          <SocialLink href="https://github.com/cavisdev" target="_blank">
-                <img src={darkMode ? `./images/GitHub_White.svg` : `./images/GitHub.svg`} />
-              </SocialLink>
-              <SocialLink href="https://www.linkedin.com/in/cameron-avis/" target="_blank">
-                <img src={darkMode ? `./images/LinkedIn_White.svg` : `./images/LinkedIn.svg`} />
-            </SocialLink>
-          </Socials>
-      <ContactButton href="mailto:camsavis@gmail.com">Email Me!</ContactButton>
+    <ContactContainer id="contact">
+      <Row>
+        <CenterHex>CONTACT</CenterHex>
+        <a href="mailto:camsavis@gmail.com">
+          <SatelliteHex shift={"translate(60%, 0)"}>
+            <img src="./images/Email.svg" />
+          </SatelliteHex>
+        </a>
+      </Row>
+      <Row>
+        <a href="https://github.com/cavisdev" target="_blank">
+          <SatelliteHex>
+            <img src="./images/GitHub_White.svg" />
+          </SatelliteHex>
+        </a>
+        <a href="https://www.linkedin.com/in/cameron-avis/" target="_blank">
+          <SatelliteHex>
+            <img src="./images/LinkedIn_White.svg" />
+          </SatelliteHex>
+        </a>
+      </Row>
     </ContactContainer>
   );
 }

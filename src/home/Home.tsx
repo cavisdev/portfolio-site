@@ -4,7 +4,7 @@ import Nameplate from "./Nameplate";
 
 export default function Home() {
   return (
-    <HomeContainer>
+    <HomeContainer id="home">
       <Nameplate />
       <Link to="about" spy={true} smooth={true} offset={-64} duration={500}>
         <Arrow src="./images/ScrollArrow.svg" />

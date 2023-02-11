@@ -47,7 +47,7 @@ const Welcome = styled.p`
 
 const AboutText = styled.p`
   margin: 0;
-  font-size: 4vw;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1.25em;
   white-space: pre-line;
@@ -70,13 +70,13 @@ const SchoolList = styled.div`
 const School = styled.h6`
   margin: 0;
   margin-bottom: 0.5em;
-  font-size: 4vw;
+  font-size: 1rem;
 `;
 
 const SchoolInformation = styled.p`
   margin: 0;
   line-height: 1.25em;
-  font-size: 4vw;
+  font-size: 1rem;
   font-weight: 300;
 `;
 

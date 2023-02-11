@@ -1,74 +1,65 @@
 import styled from "styled-components";
+import { shake } from "../animations/Shake.animation";
+
+interface SatelliteProps {
+  shift?: string;
+}
 
 const ContactContainer = styled.div`
-  justify-content: center;
-  margin: 0 auto;
-  gap: 2rem;
-  padding: 1rem 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 140px);
-  min-width: 302px;
+  padding: 4em 0;
+  min-height: 50vh;
   width: 100%;
-
-  @media only screen and (min-width: 680px) and (orientation: landscape) {
-    min-height: calc(100vh - 100px);
-  }
-
-  @media only screen and (min-width: 680px) and (orientation: portrait) {
-    min-height: calc(100vh - 244px);
-  }
 `;
 
-const Text = styled.p`
-  margin: 0;
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: center;
-  line-height: 3.5rem;
-  width: 100%;
-
-  .green {
-    color: ${({ theme }) => theme.colors.green};
-  }
-`;
-
-const Socials = styled.div`
+const Row = styled.div`
   display: flex;
-  gap: 4rem;
+  align-items: center;
+  gap: 8vw;
 `;
 
-const SocialLink = styled.a`
-  opacity: 0.5;
-  cursor: pointer;
+const CenterHex = styled.div`
+  color: ${({ theme }) => theme.colors.black};
+  font-size: 5vw;
+  letter-spacing: 1px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+  height: 33.75vw;
+  background: url("./images/Profile2.webp");
+  background-blend-mode: overlay;
+  background-color: ${({ theme }) => theme.colors.green};
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transform: translate(45%, 0%);
+`;
 
-  &:hover {
-    opacity: 1;
-  }
+const SatelliteHex = styled.div<SatelliteProps>`
+  transform: ${(props) => (props.shift ? props.shift : "")};
+  width: 20vw;
+  height: 22.5vw;
+  background-color: ${({ theme }) => theme.colors.green};
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   & img {
-    height: 64px;
-    stroke: ${({ theme }) => theme.colors.green};
+    width: 60%;
   }
+
+  &:hover, &:focus {
+    & img {
+      animation: ${shake} 1s infinite linear;
+    }
+  } 
 `;
 
-const ContactButton = styled.a`
-  background-color: ${({ theme }) => theme.colors.green};
-  color: ${({ theme }) => theme.colors.white};
-  padding: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  text-decoration: none;
-
-  &:hover {
-    opacity: 0.75;
-  }
-
-  @media only screen and (min-width: 680px) {
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
-`;
-
-export { ContactContainer, Text, ContactButton, Socials, SocialLink };
+export { ContactContainer, Row, CenterHex, SatelliteHex };

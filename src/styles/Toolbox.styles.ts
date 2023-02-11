@@ -11,7 +11,7 @@ const Skill = styled.div`
   background-color: ${({ theme }) => theme.colors.green};
   border-radius: 4px;
   margin: 0;
-  font-size: 4vw;
+  font-size: 1rem;
   font-weight: 400;
 `;
 

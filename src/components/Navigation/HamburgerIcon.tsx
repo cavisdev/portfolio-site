@@ -1,7 +1,7 @@
 import { useStore } from "../../store/useStore";
 import { Icon } from "../../styles/Icon.styles";
 
-export default function HamburgerIcon() {
+export default function HamburgerIcon(props: any) {
   const setMobileMenuOpen = useStore((state) => state.setMobileMenuOpen)
 
   return (
@@ -11,11 +11,11 @@ export default function HamburgerIcon() {
       width="44"
       height="44"
       viewBox="0 0 24 24"
-      strokeWidth="1"
+      strokeWidth="1.5"
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
-      onClick={() => setMobileMenuOpen()}
+      onClick={() => props.openMenu()}
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <line x1="6" y1="6" x2="18" y2="6" />
