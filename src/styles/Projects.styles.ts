@@ -6,7 +6,6 @@ interface ProjectNavItemProps {
 
 const ProjectsContainer = styled.div`
   padding: 4em;
-  margin: 20vw 0;
   min-height: 100vh;
   width: 100%;
   letter-spacing: 0.25px;

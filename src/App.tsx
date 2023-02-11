@@ -7,7 +7,7 @@ import Projects from "./projects/Projects";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import { theme } from "./styles/Theme.styles";
 import Footer from "./footer/Footer";
-import { Page } from "./styles/App.styles";
+import { Insert } from "./styles/App.styles";
 
 function App() {
 
@@ -17,7 +17,9 @@ function App() {
       <Home />
       <Nav />
       <About />
+      <Insert />
       <Projects />
+      <Insert />
       <Contact />
       <Footer />
     </ThemeProvider>
