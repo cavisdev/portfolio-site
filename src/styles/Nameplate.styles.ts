@@ -4,7 +4,6 @@ import { fadeIn, fade } from "../animations/Nameplate.animation";
 const NameplateContainer = styled.div`
   display: flex;
   gap: 0.75em;
-  width: 100vw;
   justify-content: center;
 `;
 
