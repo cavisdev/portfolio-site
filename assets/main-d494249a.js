@@ -289,7 +289,6 @@ In my spare time, I'm an avid hiker and traveler, and an enormous nerd for pop c
 `,S1=F.div`
   display: flex;
   gap: 0.75em;
-  width: 100vw;
   justify-content: center;
 `,hf=F.div`
   display: flex;
