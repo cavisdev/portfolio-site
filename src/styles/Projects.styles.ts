@@ -76,6 +76,8 @@ const ProjectLink = styled.div<ProjectNavItemProps>`
   height: 25vw;
   flex: 0 0 auto;
   background: url(${(props) => props.url});
+  background-color: rgb(80,80,80);
+  background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
   clip-path: polygon(50% 10%, 90% 25%, 90% 75%, 50% 90%, 10% 75%, 10% 25%);
@@ -86,6 +88,7 @@ const ProjectLink = styled.div<ProjectNavItemProps>`
   &:hover,
   &:focus {
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background-blend-mode: normal;
   }
 
   @media only screen and (min-width: 1024px) {

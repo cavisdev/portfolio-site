@@ -11,19 +11,24 @@ const HomeContainer = styled.div`
   margin-bottom: 8em;
 `;
 
-const Arrow = styled.img`
+const ArrowContainer = styled.div`
   position: absolute;
-  width: 5%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   bottom: 10%;
-  cursor: pointer;
+  height: 64px;
+  width: 64px;
   transform: translate(-50%);
-  &:hover, &:focus{
+  cursor: pointer;
+
+  & img {
+    width: 50%;
+  }
+
+  &:hover img, &:focus img {
     animation: ${bounce} 1s infinite;
   }
+`
 
-  @media only screen and (min-width: 1280px) {
-    width: 2%;
-  }
-`;
-
-export { HomeContainer, Arrow };
+export { HomeContainer, ArrowContainer};
