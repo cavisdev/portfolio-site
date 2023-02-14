@@ -10,6 +10,7 @@ import {
   SectionTitle,
   LinkContainer,
   Content,
+  ProjectLinkImage,
 } from "../styles/Projects.styles";
 import { Skill, SkillsListContainer } from "../styles/Toolbox.styles";
 import { data } from "./data";
@@ -20,10 +21,9 @@ export default function Projects() {
   const projectLinks = data.projects.map((item) => (
     <ProjectLink
       key={item.name}
-      url={item.image}
       className={activeProject.name === item.name ? "active" : ""}
       onClick={() => setActiveProject(item)}
-    />
+    ><ProjectLinkImage url={item.image} className={activeProject.name === item.name ? "active" : ""}/></ProjectLink>
   ));
 
   return (

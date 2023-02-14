@@ -100,7 +100,7 @@ const SchoolList = styled.div`
   gap: 1em;
 `
 const SchoolBlock = styled.div`
-  border-left: 4px solid ${({ theme }) => theme.colors.gray};
+  border-left: 0.5vw solid ${({ theme }) => theme.colors.gray};
   padding: 0.25em 1em;
 `
 

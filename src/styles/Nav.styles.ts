@@ -10,6 +10,7 @@ const NavContainer = styled.div`
   padding: 1em 1.5em;
   width: 100%;
   background: linear-gradient(270deg, ${({ theme }) => theme.colors.green} 0%, ${({ theme }) => theme.colors.green} 78%, ${({ theme }) => theme.colors.black} 78%);
+  border-bottom: 4px solid ${({theme}) => theme.colors.white};
 `;
 
 const Logo = styled.img`

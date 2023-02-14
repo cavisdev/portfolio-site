@@ -17,10 +17,14 @@ const ProjectsContainer = styled.div`
 `;
 
 const SectionTitle = styled.div`
+display: inline-block;
+line-height: 4vw;
   color: ${({ theme }) => theme.colors.green};
   margin-bottom: 2em;
+  padding-left: 0.25em;
   font-size: 8vw;
   font-weight: 700;
+  border-left: 1vw solid ${({theme}) => theme.colors.gray};
 
   @media only screen and (min-width: 1024px) {
     font-size: 6vw;
@@ -40,7 +44,7 @@ const Content = styled.div`
     flex-direction: row;
     gap: 2em;
   }
-`
+`;
 
 const ProjectNav = styled.div`
   overflow-x: scroll;
@@ -71,12 +75,36 @@ const ProjectNav = styled.div`
   }
 `;
 
-const ProjectLink = styled.div<ProjectNavItemProps>`
+const ProjectLink = styled.div`
+  position: relative;
   width: 22vw;
   height: 25vw;
+  background-color: ${({ theme }) => theme.colors.white};
   flex: 0 0 auto;
+  clip-path: polygon(50% 10%, 90% 25%, 90% 75%, 50% 90%, 10% 75%, 10% 25%);
+  cursor: pointer;
+  transition: clip-path 0.5s;
+
+  &.active {
+    background-color: ${({ theme }) => theme.colors.green};
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+  @media only screen and (min-width: 1024px) {
+    width: 11vw;
+    height: 13vw;
+  }
+`;
+
+const ProjectLinkImage = styled.div<ProjectNavItemProps>`
+  position: absolute;
+  width: 96%;
+  height: 96%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: url(${(props) => props.url});
-  background-color: rgb(80,80,80);
+  background-color: rgb(80, 80, 80);
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
@@ -84,16 +112,13 @@ const ProjectLink = styled.div<ProjectNavItemProps>`
   cursor: pointer;
   transition: clip-path 0.5s;
 
-  &.active,
-  &:hover,
-  &:focus {
+  &.active {
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     background-blend-mode: normal;
   }
 
-  @media only screen and (min-width: 1024px) {
-    width: 11vw;
-    height: 13vw;
+  &:hover, &:focus {
+    background-blend-mode: normal;
   }
 `;
 
@@ -116,7 +141,7 @@ const DisplayImage = styled.img`
 const ProjectTitle = styled.p`
   margin: 0.5em 0;
   color: ${({ theme }) => theme.colors.green};
-  border-left: 4px solid ${({ theme }) => theme.colors.gray};
+  border-left: 0.5vw solid ${({ theme }) => theme.colors.gray};
   padding-left: 0.25em;
   font-size: 6vw;
   font-weight: 700;
@@ -163,6 +188,7 @@ export {
   Content,
   ProjectNav,
   ProjectLink,
+  ProjectLinkImage,
   DisplayContainer,
   DisplayImage,
   ProjectTitle,
