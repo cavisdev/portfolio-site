@@ -30,7 +30,6 @@ const MobileMenuContainer = styled.div`
   gap: 1em;
   right: 0;
   top: 80px;
-  height: 240px;
   width: 0px;
   overflow: hidden;
   transition: width 0.25s ease-in-out;
@@ -51,7 +50,8 @@ padding: 1em;
 padding-left: 2em;
 width: 112px;
 background-color: ${({ theme }) => theme.colors.gray};
-box-shadow: -2px 2px ${({ theme }) => theme.colors.white};
+border-left: 2px solid ${({ theme }) => theme.colors.white};
+border-bottom: 2px solid ${({ theme }) => theme.colors.white};
 cursor: pointer;
 transition: width 0.25s linear;
 
