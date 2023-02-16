@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface MobileMenuProps {
+  topLocation: number;
+}
+
 const NavContainer = styled.div`
   z-index: 20;
   display: flex;
@@ -7,7 +11,7 @@ const NavContainer = styled.div`
   align-items: center;
   position: sticky;
   top: 0;
-  padding: 1em 1.5em;
+  padding: 0.5em 1.5em;
   width: 100%;
   background: linear-gradient(270deg, ${({ theme }) => theme.colors.green} 0%, ${({ theme }) => theme.colors.green} 78%, ${({ theme }) => theme.colors.black} 78%);
   border-bottom: 4px solid ${({theme}) => theme.colors.white};
@@ -22,14 +26,17 @@ const MobileMenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  position: fixed;
+  position: absolute;
   gap: 1em;
-  right: -100%;
-  top: 90px;
-  transition: right 0.25s linear;
+  right: 0;
+  top: 80px;
+  height: 240px;
+  width: 0px;
+  overflow: hidden;
+  transition: width 0.25s ease-in-out;
 
   &.active {
-    right: 0;
+    width: 152px; 
   }
 
   @media only screen and (min-width: 768px) {
@@ -42,14 +49,14 @@ z-index: 100;
 text-align: right;
 padding: 1em;
 padding-left: 2em;
-width: 30vw;
+width: 112px;
 background-color: ${({ theme }) => theme.colors.gray};
 box-shadow: -2px 2px ${({ theme }) => theme.colors.white};
 cursor: pointer;
 transition: width 0.25s linear;
 
 &:hover, &focus { 
-  width:  40vw;
+  width:  148px;
   background-color: ${({ theme }) => theme.colors.green};
 }
 

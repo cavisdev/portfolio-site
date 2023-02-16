@@ -10,55 +10,72 @@ const ContactContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4em 0;
+  padding: 2em;
   min-height: 50vh;
   width: 100%;
-
-  @media only screen and (min-width: 1280px) {
-    padding: 8em 0;
-  }
+  max-width: 1200px;
+  margin: 0 auto;
 `;
 
 const Row = styled.div`
   display: flex;
   align-items: center;
-  gap: 8vw;
+  gap: 1.5em;
+
+  @media only screen and (min-width: 480px) {
+    gap: 2.25em;
+  }
+
+  @media only screen and (min-width: 768px) {
+    gap: 3.25em;
+  }
 
   @media only screen and (min-width: 1024px) {
-    gap: 6vw;
+    gap: 8em;
   }
 `;
 
 const CenterHex = styled.div`
   color: ${({ theme }) => theme.colors.black};
-  font-size: 5vw;
+  font-size: 1rem;
   letter-spacing: 1px;
   font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30vw;
-  height: 33.75vw;
+  width: 113px;
+  height: 127px;
   background: url("./images/Profile2.webp");
   background-blend-mode: overlay;
   background-color: ${({ theme }) => theme.colors.green};
   background-size: cover;
   background-position: center;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  transform: translate(45%, 0%);
+  transform: translate(44%, 0%);
+
+  @media only screen and (min-width: 480px) {
+    width: 168px;
+    height: 189px;
+    font-size: 1.5rem;
+  }
+
+  @media only screen and (min-width: 768px) {
+    width: 252px;
+    height: 284px;
+    font-size: 2.25rem;
+  }
 
   @media only screen and (min-width: 1024px) {
-    width: 20vw;
-    height: 22.5vw;
-    font-size: 3.25vw;
-    transform: translate(40%, 0%);
+    width: 378px;
+    height: 425px;
+    font-size: 3rem;
   }
 `;
 
 const SatelliteHex = styled.div<SatelliteProps>`
   transform: ${(props) => (props.shift ? props.shift : "")};
-  width: 20vw;
-  height: 22.5vw;
+  width: 75px;
+  height: 84px;
   background-color: ${({ theme }) => theme.colors.green};
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   cursor: pointer;
@@ -70,16 +87,28 @@ const SatelliteHex = styled.div<SatelliteProps>`
     width: 60%;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     & img {
       animation: ${shake} 1s infinite linear;
     }
-  } 
+  }
+
+  @media only screen and (min-width: 480px) {
+    width: 112px;
+    height: 126px;
+    font-size: 1.5rem;
+  }
+
+  @media only screen and (min-width: 768px) {
+    width: 168px;
+    height: 189px;
+    font-size: 2.25rem;
+  }
 
   @media only screen and (min-width: 1024px) {
-    width: 10vw;
-    height: 11.25vw;
-    font-size: 3.25vw;
+    width: 200px;
+    height: 225px;
   }
 `;
 

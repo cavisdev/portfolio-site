@@ -5,7 +5,7 @@ interface ProjectNavItemProps {
 }
 
 const ProjectsContainer = styled.div`
-  padding: 4em;
+  padding: 2em;
   min-height: 100vh;
   width: 100%;
   letter-spacing: 0.25px;
@@ -39,6 +39,8 @@ line-height: 4vw;
 const Content = styled.div`
   display: flex;
   flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
 
   @media only screen and (min-width: 1024px) {
     flex-direction: row;
@@ -51,9 +53,12 @@ const ProjectNav = styled.div`
   overflow-y: hidden;
   display: flex;
   width: 100%;
-  height: 25vw;
-  gap: 0em 1.5em;
+  height: 160px;
   margin-bottom: 2em;
+
+  @media only screen and (min-width: 768px) {
+    height: 232px;
+  }
 
   @media only screen and (min-width: 1024px) {
     flex-direction: column;
@@ -61,24 +66,20 @@ const ProjectNav = styled.div`
     overflow-y: auto;
     height: 100%;
     margin-bottom: 0;
-    width: 20%;
+    width: 40%;
     align-items: center;
   }
 
   @media only screen and (min-width: 1280px) {
     flex-direction: row;
     flex-wrap: wrap;
-    height: 100%;
-    margin-bottom: 0;
-    width: 40%;
-    align-items: center;
   }
 `;
 
 const ProjectLink = styled.div`
   position: relative;
-  width: 22vw;
-  height: 25vw;
+  width: 113px;
+  height: 127px;
   background-color: ${({ theme }) => theme.colors.white};
   flex: 0 0 auto;
   clip-path: polygon(50% 10%, 90% 25%, 90% 75%, 50% 90%, 10% 75%, 10% 25%);
@@ -90,9 +91,14 @@ const ProjectLink = styled.div`
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   }
 
+  @media only screen and (min-width: 768px) {
+    width: 168px;
+    height: 189px;
+  }
+
   @media only screen and (min-width: 1024px) {
-    width: 11vw;
-    height: 13vw;
+    width: 200px;
+    height: 224px;
   }
 `;
 

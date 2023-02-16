@@ -17,33 +17,10 @@ export default function Nav() {
   const setMobileMenuOpen = useStore((state) => state.setMobileMenuOpen);
   const navRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const checkScroll = () => {
-      if (
-        mobileMenuOpen &&
-        navRef.current &&
-        window.scrollY < navRef.current.offsetTop - 18
-      ) {
-        setMobileMenuOpen();
-      }
-    };
-    document.addEventListener("scroll", checkScroll);
-
-    return () => {
-      document.removeEventListener("scroll", checkScroll);
-    };
-  }, [mobileMenuOpen]);
-
-  function handleMenu() {
-    if (navRef.current && window.scrollY >= navRef.current.offsetTop - 18) {
-      setMobileMenuOpen();
-    }
-  }
-
   return (
     <NavContainer ref={navRef}>
       <Logo src={"./images/logo_light.svg"} />
-      <HamburgerIcon handleMenu={handleMenu} />
+      <HamburgerIcon />
       <MobileMenuContainer className={mobileMenuOpen ? "active" : ""}>
         <Link to="home" spy={true} smooth={true} offset={-64} duration={500}>
           <MobileLink>home</MobileLink>

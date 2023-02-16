@@ -17,12 +17,14 @@ interface BoxStyles {
 }
 
 const AboutContainer = styled.div`
-  padding: 4em;
+  padding: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
   letter-spacing: 0.25px;
+  max-width: 1200px;
+  margin: 0 auto;
 
   @media only screen and (min-width: 1024px) {
     flex-direction: row;
@@ -37,7 +39,7 @@ const AboutContainer = styled.div`
 
 const Headshot = styled.img`
   width: 100%;
-  max-width: 50vw;
+  max-width: 50%;
   border-radius: 8px;
   margin-bottom: 2em;
 `;
