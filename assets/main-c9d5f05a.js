@@ -432,7 +432,6 @@ In my spare time, I'm an avid hiker and traveler, and an enormous nerd for pop c
   gap: 1em;
   right: 0;
   top: 80px;
-  height: 240px;
   width: 0px;
   overflow: hidden;
   transition: width 0.25s ease-in-out;
@@ -451,7 +450,8 @@ padding: 1em;
 padding-left: 2em;
 width: 112px;
 background-color: ${({theme:e})=>e.colors.gray};
-box-shadow: -2px 2px ${({theme:e})=>e.colors.white};
+border-left: 2px solid ${({theme:e})=>e.colors.white};
+border-bottom: 2px solid ${({theme:e})=>e.colors.white};
 cursor: pointer;
 transition: width 0.25s linear;
 
