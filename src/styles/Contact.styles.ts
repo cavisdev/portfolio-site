@@ -5,13 +5,13 @@ interface SatelliteProps {
   shift?: string;
 }
 
-const ContactContainer = styled.div`
+const ContactContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2em;
-  min-height: 50vh;
+  min-height: 100vh;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -35,7 +35,7 @@ const Row = styled.div`
   }
 `;
 
-const CenterHex = styled.div`
+const CenterHex = styled.header`
   color: ${({ theme }) => theme.colors.black};
   font-size: 1rem;
   letter-spacing: 1px;
@@ -72,11 +72,12 @@ const CenterHex = styled.div`
   }
 `;
 
-const SatelliteHex = styled.div<SatelliteProps>`
+const SatelliteHex = styled.button<SatelliteProps>`
   transform: ${(props) => (props.shift ? props.shift : "")};
   width: 75px;
   height: 84px;
   background-color: ${({ theme }) => theme.colors.green};
+  border: none;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   cursor: pointer;
   display: flex;

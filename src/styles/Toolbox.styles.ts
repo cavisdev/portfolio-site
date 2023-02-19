@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
-const SkillsListContainer = styled.div`
+const SkillsListContainer = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 0.75em;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 `;
 
-const Skill = styled.div`
+const Skill = styled.li`
   padding: 0.4em;
   background-color: ${({ theme }) => theme.colors.green};
   border-radius: 4px;

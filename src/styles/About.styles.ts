@@ -16,7 +16,7 @@ interface BoxStyles {
   right?: string;
 }
 
-const AboutContainer = styled.div`
+const AboutContainer = styled.section`
   padding: 2em;
   display: flex;
   flex-direction: column;
@@ -44,7 +44,7 @@ const Headshot = styled.img`
   margin-bottom: 2em;
 `;
 
-const InfoColumn = styled.div`
+const InfoColumn = styled.article`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -53,7 +53,7 @@ const InfoColumn = styled.div`
 
 `;
 
-const Welcome = styled.p`
+const Welcome = styled.h1`
   margin: 0;
   font-size: 12vw;
   font-weight: 700;
@@ -80,9 +80,7 @@ const AboutText = styled.p`
   }
 `;
 
-const Title = styled.h6`
-  margin: 0;
-  margin-top: 2em;
+const Title = styled.h2`
   color: ${({ theme }) => theme.colors.green};
   text-transform: uppercase;
   font-size: 6vw;
@@ -96,26 +94,25 @@ const Title = styled.h6`
   }
 `;
 
-const SchoolList = styled.div`
+const SchoolList = styled.ol`
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 `
-const SchoolBlock = styled.div`
+const SchoolBlock = styled.li`
   border-left: 0.5vw solid ${({ theme }) => theme.colors.gray};
   padding: 0.25em 1em;
 `
 
-const SchoolName = styled.h6`
-  margin: 0;
-  margin-bottom: 0.5em;
-  font-size: 1rem;
+const SchoolName = styled.h3`
+margin: 0.5em auto;
 `;
 
 const SchoolInformation = styled.p`
-  margin: 0;
   line-height: 1.25em;
-  font-size: 1rem;
   font-weight: 300;
 `;
 

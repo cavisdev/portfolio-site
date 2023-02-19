@@ -5,6 +5,7 @@ const Icon = styled.svg`
     display: block;
     stroke: ${({ theme }) => theme.colors.black};
     cursor: pointer;
+    margin: 0.5em 0;
 
     &:hover {
         stroke: ${({ theme }) => theme.colors.white};

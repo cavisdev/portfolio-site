@@ -31,7 +31,7 @@ export default function About() {
 
   return (
     <AboutContainer id="about">
-      <Headshot src="./images/Profile.webp" />
+      <Headshot src="./images/Profile.webp" alt="Cameron Avis smiling outdoors in a red and black plaid flannel shirt."/>
       <InfoColumn>
         <Welcome>Hello!</Welcome>
         <AboutText>{aboutData.intro}</AboutText>

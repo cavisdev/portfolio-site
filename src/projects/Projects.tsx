@@ -11,6 +11,7 @@ import {
   LinkContainer,
   Content,
   ProjectLinkImage,
+  Disclaimer,
 } from "../styles/Projects.styles";
 import { Skill, SkillsListContainer } from "../styles/Toolbox.styles";
 import { data } from "./data";
@@ -23,7 +24,7 @@ export default function Projects() {
       key={item.name}
       className={activeProject.name === item.name ? "active" : ""}
       onClick={() => setActiveProject(item)}
-    ><ProjectLinkImage url={item.image} className={activeProject.name === item.name ? "active" : ""}/></ProjectLink>
+    ><ProjectLinkImage url={item.image} className={activeProject.name === item.name ? "active" : ""} aria-label={item.name}/></ProjectLink>
   ));
 
   return (
@@ -32,7 +33,7 @@ export default function Projects() {
       <Content>
         <ProjectNav>{projectLinks}</ProjectNav>
         <DisplayContainer>
-          <DisplayImage src={activeProject.image} />
+          <DisplayImage src={activeProject.image} alt={`Homepage for ${activeProject.name}`} />
           <ProjectTitle>{activeProject.name}</ProjectTitle>
           <Description>{activeProject.description}</Description>
           <LinkContainer>
@@ -43,6 +44,7 @@ export default function Projects() {
               View Code
             </a>
           </LinkContainer>
+          <Disclaimer>{`(links open in new tab)`}</Disclaimer>
           <SkillsListContainer>
             {activeProject.skills.map((skill) => (
               <Skill key={skill}>{skill}</Skill>

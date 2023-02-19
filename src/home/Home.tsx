@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <HomeContainer id="home">
       <Nameplate />
-      <Link to="about" spy={true} smooth={true} offset={-64} duration={500}>
-        <ArrowContainer>
+      <Link to="about" spy={true} smooth={true} offset={-52} duration={500}>
+        <ArrowContainer aria-label={"Scroll Down"}>
           <img src="./images/ScrollArrow.svg" />
         </ArrowContainer>
       </Link>

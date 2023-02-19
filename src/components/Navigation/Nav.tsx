@@ -2,7 +2,6 @@ import { useStore } from "../../store/useStore";
 import { Link } from "react-scroll";
 import {
   Backdrop,
-  DesktopLink,
   DesktopMenuContainer,
   Logo,
   MobileLink,
@@ -10,19 +9,17 @@ import {
   NavContainer,
 } from "../../styles/Nav.styles";
 import HamburgerIcon from "./HamburgerIcon";
-import { useEffect, useRef } from "react";
 
 export default function Nav() {
   const mobileMenuOpen = useStore((state) => state.mobileMenuOpen);
   const setMobileMenuOpen = useStore((state) => state.setMobileMenuOpen);
-  const navRef = useRef<HTMLDivElement>(null);
 
   return (
-    <NavContainer ref={navRef}>
-      <Logo src={"./images/logo_light.svg"} />
+    <NavContainer>
+      <Logo src={"./images/logo_light.svg"} alt="Logo for Cameron Avis, depicting a green C with a negative-space A in the center."/>
       <HamburgerIcon />
       <MobileMenuContainer className={mobileMenuOpen ? "active" : ""}>
-        <Link to="home" spy={true} smooth={true} offset={-64} duration={500}>
+        <Link to="home" spy={true} smooth={true} duration={500}>
           <MobileLink>home</MobileLink>
         </Link>
         <Link to="about" spy={true} smooth={true} offset={-64} duration={500}>
@@ -43,23 +40,23 @@ export default function Nav() {
       </MobileMenuContainer>
       {mobileMenuOpen && <Backdrop onClick={() => setMobileMenuOpen()} />}
       <DesktopMenuContainer>
-        <Link to="home" spy={true} smooth={true} offset={-64} duration={500}>
-          <DesktopLink>home</DesktopLink>
+        <Link to="home" spy={true} smooth={true} duration={500}>
+          <a>home</a>
         </Link>
-        <Link to="about" spy={true} smooth={true} offset={-64} duration={500}>
-        <DesktopLink>about</DesktopLink>
+        <Link to="about" spy={true} smooth={true} offset={-52} duration={500}>
+        <a>about</a>
         </Link>
         <Link
           to="projects"
           spy={true}
           smooth={true}
-          offset={-64}
+          offset={-52}
           duration={500}
         >
-          <DesktopLink>projects</DesktopLink>
+          <a>projects</a>
         </Link>
-        <Link to="contact" spy={true} smooth={true} offset={-64} duration={500}>
-          <DesktopLink>contact</DesktopLink>
+        <Link to="contact" spy={true} smooth={true} offset={-52} duration={500}>
+          <a>contact</a>
         </Link>
       </DesktopMenuContainer>
     </NavContainer>

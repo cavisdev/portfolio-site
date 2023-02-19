@@ -4,7 +4,7 @@ interface ProjectNavItemProps {
   url: string;
 }
 
-const ProjectsContainer = styled.div`
+const ProjectsContainer = styled.section`
   padding: 2em;
   min-height: 100vh;
   width: 100%;
@@ -16,15 +16,14 @@ const ProjectsContainer = styled.div`
   }
 `;
 
-const SectionTitle = styled.div`
-display: inline-block;
-line-height: 4vw;
+const SectionTitle = styled.h1`
+  display: inline-block;
+  line-height: 4vw;
   color: ${({ theme }) => theme.colors.green};
-  margin-bottom: 2em;
   padding-left: 0.25em;
   font-size: 8vw;
   font-weight: 700;
-  border-left: 1vw solid ${({theme}) => theme.colors.gray};
+  border-left: 1vw solid ${({ theme }) => theme.colors.gray};
 
   @media only screen and (min-width: 1024px) {
     font-size: 6vw;
@@ -36,7 +35,7 @@ line-height: 4vw;
   }
 `;
 
-const Content = styled.div`
+const Content = styled.article`
   display: flex;
   flex-direction: column;
   max-width: 1200px;
@@ -48,13 +47,16 @@ const Content = styled.div`
   }
 `;
 
-const ProjectNav = styled.div`
+const ProjectNav = styled.ul`
   overflow-x: scroll;
   overflow-y: hidden;
   display: flex;
   width: 100%;
   height: 160px;
+  list-style-type: none;
+  margin: 0;
   margin-bottom: 2em;
+  padding: 0;
 
   @media only screen and (min-width: 768px) {
     height: 232px;
@@ -76,7 +78,7 @@ const ProjectNav = styled.div`
   }
 `;
 
-const ProjectLink = styled.div`
+const ProjectLink = styled.li`
   position: relative;
   width: 113px;
   height: 127px;
@@ -102,13 +104,14 @@ const ProjectLink = styled.div`
   }
 `;
 
-const ProjectLinkImage = styled.div<ProjectNavItemProps>`
+const ProjectLinkImage = styled.button<ProjectNavItemProps>`
   position: absolute;
   width: 96%;
   height: 96%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border: none;
   background: url(${(props) => props.url});
   background-color: rgb(80, 80, 80);
   background-blend-mode: overlay;
@@ -123,7 +126,8 @@ const ProjectLinkImage = styled.div<ProjectNavItemProps>`
     background-blend-mode: normal;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-blend-mode: normal;
   }
 `;
@@ -144,7 +148,7 @@ const DisplayImage = styled.img`
   border-radius: 4px;
 `;
 
-const ProjectTitle = styled.p`
+const ProjectTitle = styled.h2`
   margin: 0.5em 0;
   color: ${({ theme }) => theme.colors.green};
   border-left: 0.5vw solid ${({ theme }) => theme.colors.gray};
@@ -172,7 +176,6 @@ const Description = styled.p`
 const LinkContainer = styled.div`
   display: flex;
   gap: 1em;
-  margin-bottom: 1em;
 
   & a {
     text-decoration: none;
@@ -188,6 +191,14 @@ const LinkContainer = styled.div`
   }
 `;
 
+const Disclaimer = styled.p`
+  margin: 0;
+  font-weight: 300;
+  color: ${({ theme }) => theme.colors.white};
+  opacity: 0.65;
+  letter-spacing: 1px;
+`;
+
 export {
   ProjectsContainer,
   SectionTitle,
@@ -200,4 +211,5 @@ export {
   ProjectTitle,
   Description,
   LinkContainer,
+  Disclaimer,
 };

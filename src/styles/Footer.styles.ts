@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const FooterContainer = styled.div`
+const FooterContainer = styled.footer`
     background-color: ${({ theme }) => theme.colors.green};
     clip-path: polygon(0% 0%, 50% 30%, 100% 0%, 100% 100%, 0% 100%);
     padding: 2em;

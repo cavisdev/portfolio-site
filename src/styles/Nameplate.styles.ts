@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { fadeIn, fade } from "../animations/Nameplate.animation";
 
-const NameplateContainer = styled.div`
+const NameplateContainer = styled.article`
   display: flex;
   gap: 0.75em;
   justify-content: center;
@@ -45,7 +45,7 @@ const Name = styled.h1`
   }
 `;
 
-const Position = styled.h3`
+const Position = styled.h2`
   font-size: 1.25rem;
   text-align: right;
   margin: 0;
@@ -74,7 +74,7 @@ const GradientLine = styled.div`
   }
 `;
 
-const Skill = styled.h6`
+const Skill = styled.h3`
   margin: 0;
   margin-top: 0.25em;
   font-weight: 300;

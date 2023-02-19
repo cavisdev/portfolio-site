@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { bounce } from "../animations/ScrollArrow.animation";
 
-const HomeContainer = styled.div`
+const HomeContainer = styled.section`
   position: relative;
   justify-content: center;
   display: flex;
@@ -11,7 +11,7 @@ const HomeContainer = styled.div`
   margin-bottom: 8em;
 `;
 
-const ArrowContainer = styled.div`
+const ArrowContainer = styled.button`
   position: absolute;
   display: flex;
   align-items: flex-end;
@@ -20,6 +20,8 @@ const ArrowContainer = styled.div`
   height: 64px;
   width: 64px;
   transform: translate(-50%);
+  background: none;
+  border: none;
   cursor: pointer;
 
   & img {

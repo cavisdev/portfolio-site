@@ -4,15 +4,14 @@ interface MobileMenuProps {
   topLocation: number;
 }
 
-const NavContainer = styled.div`
+const NavContainer = styled.header`
   z-index: 20;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
-  padding: 0.5em 1.5em;
-  width: 100%;
+  padding: 0 1.5em;
   background: linear-gradient(270deg, ${({ theme }) => theme.colors.green} 0%, ${({ theme }) => theme.colors.green} 78%, ${({ theme }) => theme.colors.black} 78%);
   border-bottom: 4px solid ${({theme}) => theme.colors.white};
 `;
@@ -22,12 +21,13 @@ const Logo = styled.img`
   height: 2rem;
 `
 
-const MobileMenuContainer = styled.div`
+const MobileMenuContainer = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   position: absolute;
   gap: 1em;
+  padding-bottom: 0.5rem;
   right: 0;
   top: 80px;
   width: 0px;
@@ -41,23 +41,29 @@ const MobileMenuContainer = styled.div`
   @media only screen and (min-width: 768px) {
     display: none;
   }
+
+  & > * {
+    background-color: ${({ theme }) => theme.colors.gray};
+  }
+
+  & > *.active, & > *:hover {
+    background-color: ${({ theme }) => theme.colors.green};
+  }
 `
 
-const MobileLink = styled.div`
+const MobileLink = styled.a`
+display: block;
 z-index: 100;
 text-align: right;
 padding: 1em;
 padding-left: 2em;
 width: 112px;
-background-color: ${({ theme }) => theme.colors.gray};
-border-left: 2px solid ${({ theme }) => theme.colors.white};
-border-bottom: 2px solid ${({ theme }) => theme.colors.white};
+box-shadow: -2px 2px ${({ theme }) => theme.colors.white};
 cursor: pointer;
 transition: width 0.25s linear;
 
 &:hover, &focus { 
   width:  148px;
-  background-color: ${({ theme }) => theme.colors.green};
 }
 
 
@@ -75,23 +81,29 @@ const Backdrop = styled.div`
     }
 `
 
-const DesktopMenuContainer = styled.div`
+const DesktopMenuContainer = styled.nav`
 display: none;
 
 @media only screen and (min-width: 768px) {
   display: flex;
 }
-`
 
-const DesktopLink = styled.div`
-  padding: 0 1em;
+& > * {
+  padding: 0.5em 1em;
   font-size: 1.5rem;
   cursor: pointer;
   color: ${({theme}) => theme.colors.black};
+}
 
-  &:hover, &:focus {
-    color: ${({theme}) => theme.colors.white};
-  }
+& > *:hover, & > *:focus {
+  background-color: ${({ theme }) => theme.colors.gray};
+  color: ${({theme}) => theme.colors.white};
+}
+
+& > *.active {
+  background-color: ${({ theme }) => theme.colors.black};
+  color: ${({theme}) => theme.colors.white};
+}
 `
 
-export { NavContainer, Logo, MobileMenuContainer, MobileLink, Backdrop, DesktopMenuContainer, DesktopLink };
+export { NavContainer, Logo, MobileMenuContainer, MobileLink, Backdrop, DesktopMenuContainer};
