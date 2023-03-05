@@ -17,6 +17,28 @@ const ContactContainer = styled.section`
   margin: 0 auto;
 `;
 
+const Text = styled.p`
+max-width: 80%;
+font-size: 1.75rem;
+line-height: 1.3em;
+margin-top: 2.5em;
+margin-bottom: 0;
+
+.bigGreen {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: ${({theme}) => theme.colors.green};
+}
+
+@media only screen and (min-width: 1024px) {
+  font-size: 2.25rem;
+
+  .bigGreen {
+    font-size: 2.75rem;
+  }
+}
+`
+
 const Row = styled.div`
   display: flex;
   align-items: center;
@@ -113,4 +135,4 @@ const SatelliteHex = styled.button<SatelliteProps>`
   }
 `;
 
-export { ContactContainer, Row, CenterHex, SatelliteHex };
+export { ContactContainer, Text, Row, CenterHex, SatelliteHex };

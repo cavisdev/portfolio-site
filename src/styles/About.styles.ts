@@ -25,11 +25,12 @@ const AboutContainer = styled.section`
   letter-spacing: 0.25px;
   max-width: 1200px;
   margin: 0 auto;
+  gap: 1.5em;
 
   @media only screen and (min-width: 1024px) {
     flex-direction: row;
     align-items: flex-start;
-    gap: 2em;
+    gap: 4em;
   }
 
   @media only screen and (min-width: 1280px) {

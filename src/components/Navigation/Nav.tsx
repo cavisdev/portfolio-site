@@ -41,10 +41,10 @@ export default function Nav() {
       {mobileMenuOpen && <Backdrop onClick={() => setMobileMenuOpen()} />}
       <DesktopMenuContainer>
         <Link to="home" spy={true} smooth={true} duration={500}>
-          <a>home</a>
+          <li>home</li>
         </Link>
         <Link to="about" spy={true} smooth={true} offset={-52} duration={500}>
-        <a>about</a>
+        <li>about</li>
         </Link>
         <Link
           to="projects"
@@ -53,10 +53,10 @@ export default function Nav() {
           offset={-52}
           duration={500}
         >
-          <a>projects</a>
+          <li>projects</li>
         </Link>
         <Link to="contact" spy={true} smooth={true} offset={-52} duration={500}>
-          <a>contact</a>
+          <li>contact</li>
         </Link>
       </DesktopMenuContainer>
     </NavContainer>

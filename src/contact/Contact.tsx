@@ -3,6 +3,7 @@ import {
   ContactContainer,
   Row,
   SatelliteHex,
+  Text,
 } from "../styles/Contact.styles";
 
 export default function Contact() {
@@ -28,6 +29,9 @@ export default function Contact() {
           </SatelliteHex>
         </a>
       </Row>
+      <Text>
+        <span className="bigGreen">Thank you</span> for stopping by! I can't wait to hear from you! Feel free to reach out or follow me on my socials!
+      </Text>
     </ContactContainer>
   );
 }

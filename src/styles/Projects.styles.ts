@@ -49,6 +49,7 @@ const Content = styled.article`
 
 const ProjectNav = styled.ul`
   overflow-x: scroll;
+  scroll-snap-type: x mandatory;
   overflow-y: hidden;
   display: flex;
   width: 100%;
@@ -57,6 +58,10 @@ const ProjectNav = styled.ul`
   margin: 0;
   margin-bottom: 2em;
   padding: 0;
+
+  & > * {
+    scroll-snap-align: start;
+  }
 
   @media only screen and (min-width: 768px) {
     height: 232px;

@@ -5,7 +5,7 @@ const aboutData = {
     {
       school: "Scrimba",
       major: "Front-End Development - React JS",
-      date: "June 2022 - October 2022",
+      date: "June 2022 - February 2023",
     },
     {
       school: "Pikes Peak Community College",

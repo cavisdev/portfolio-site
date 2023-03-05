@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
-interface MobileMenuProps {
-  topLocation: number;
-}
-
-const NavContainer = styled.header`
+const NavContainer = styled.nav`
   z-index: 20;
   display: flex;
   justify-content: space-between;
@@ -21,12 +17,14 @@ const Logo = styled.img`
   height: 2rem;
 `
 
-const MobileMenuContainer = styled.nav`
+const MobileMenuContainer = styled.ol`
   display: flex;
+  margin: 0;
   flex-direction: column;
   align-items: flex-end;
   position: absolute;
   gap: 1em;
+  padding: 0;
   padding-bottom: 0.5rem;
   right: 0;
   top: 80px;
@@ -37,7 +35,7 @@ const MobileMenuContainer = styled.nav`
   &.active {
     width: 152px; 
   }
-
+  
   @media only screen and (min-width: 768px) {
     display: none;
   }
@@ -51,7 +49,8 @@ const MobileMenuContainer = styled.nav`
   }
 `
 
-const MobileLink = styled.a`
+const MobileLink = styled.li`
+margin: 0;
 display: block;
 z-index: 100;
 text-align: right;
@@ -81,8 +80,10 @@ const Backdrop = styled.div`
     }
 `
 
-const DesktopMenuContainer = styled.nav`
+const DesktopMenuContainer = styled.ol`
 display: none;
+margin: 0;
+list-style-type: none;
 
 @media only screen and (min-width: 768px) {
   display: flex;
